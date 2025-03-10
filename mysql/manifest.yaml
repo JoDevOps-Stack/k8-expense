@@ -42,3 +42,4 @@ spec:
   - protocol: TCP
     port: 3306 # for service port we can give any  
     targetPort: 3306 # for targetgroup 3306 mandatory
+    
