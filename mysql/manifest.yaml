@@ -25,6 +25,7 @@ spec:
       containers:
       - name: nginx
         image: jyothi2101/mysql:1.0.0
+        
 
 # kind: Service
 # apiVersion: v1
