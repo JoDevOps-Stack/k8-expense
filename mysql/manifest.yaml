@@ -26,18 +26,19 @@ spec:
       - name: nginx
         image: joindevops/mysql:1.0.0
 
-
-# kind: Service
-# apiVersion: v1
-# metadata:
-#   name: mysql
-#   namespace: expense
-# spec:
-#   selector: # labels are used as selectors
-#     app: mysql
-#     tier: mysql
-#     project: expense
-#   ports:
-#   - protocol: TCP
-#     port: 3306 # service port
-#     targetPort: 3306
+#to communicate pod to pod service should be created
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: mysql
+  namespace: expense
+spec:
+  selector: # labels are used as selectors
+    app: mysql
+    tier: mysql
+    project: expense
+  ports:
+  - protocol: TCP
+    port: 3306 # for service port we can give any  
+    targetPort: 3306 # for targetgroup 3306 mandatory
